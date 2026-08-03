@@ -1,0 +1,9 @@
+{
+  "device": "mi_band_10",
+  "kind": "steps",
+  "observed_at": 1785459600,
+  "data": {
+    "steps": 5421,
+    "distance_m": 3710
+  }
+}

@@ -1,6 +1,6 @@
 # GadgetbridgeとSmart Bandデバイスの連携
-## 1. Smart Band10の接続
-### 1.1 Mi Fitnessのインストール
+## 1. Mi Fitnessのインストール・初期設定
+### 1.1 Mi Fitnessアプリのインストール
 GooglePlayストアからMi Fitnessアプリをインストールする。
 
 <img src=".\img\Screenshot_2026-08-06-15-41-29-491_com.android.vending.jpg" alt="MiFitnessインストール" height="500">
@@ -50,7 +50,8 @@ Mi Fitessアプリ下の`プロフィール`タブを選択する。
 
 <img src=".\img\PXL_20260806_064644318.jpg" alt="Xiaomiアカウントを作成" height="500">
 
-### 1.4 Smart Bandの起動
+## 2. Smart Bandの接続
+### 2.1 Smart Bandの起動
 充電ケーブルでSmart Bandを電源に接続し、起動する。
 
 <img alt="MiBand電源接続" height="500">
@@ -59,7 +60,7 @@ Mi Fitessアプリ下の`プロフィール`タブを選択する。
 
 <img src=".\img\PXL_20260806_065428113.jpg" alt="MiBand言語選択" height="500">
 
-### 1.5 Smart Bandの接続
+### 2.2 Smart Bandの接続
 Mi Fitnessアプリ下の`デバイス`タブを選択する。
 
 <img src=".\img\Screenshot_2026-08-06-15-45-33-128_com.xiaomi.wearable.jpg" alt="初期設定完了" height="500">

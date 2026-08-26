@@ -1,5 +1,3 @@
-                                                                                                                          import json
-import sqlite3
 import subprocess
 import threading
 import time

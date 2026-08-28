@@ -22,4 +22,3 @@ requests.get(f"{PHONE_URL}/stop")
 
 #疑似電話（発信者名変更）
 requests.get(f"{PHONE_URL}/start?caller={caller_name}") 
-             

@@ -63,6 +63,9 @@ class RequestHandler(BaseHTTPRequestHandler):
             "-p",
             "nodomain.freeyourgadget.gadgetbridge",
         ],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
   def vibrate_stop(self):
     subprocess.run(
         [
@@ -82,7 +85,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             "am",
             "broadcast",
             "-a",
-        	"nodomain.freeyourgadget.gadgetbridge.command.DEBUG_SEND_NOTIFICATION",
+            "nodomain.freeyourgadget.gadgetbridge.command.DEBUG_SEND_NOTIFICATION",
             "-e",
             "type",
             "GENERIC_SMS",

@@ -82,17 +82,99 @@ Smart Band側でも`v(チェックマーク)`を押して、ペア設定をす�
 
 <br>以降Smart Bandの使い方を読みながら、`次へ`で進む。
 
-<img src=".\img\Screenshot_2026-08-06-15-56-03-926_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド" height="500">
-<img src=".\img\Screenshot_2026-08-06-15-56-06-196_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド" height="500">
-<img src=".\img\Screenshot_2026-08-06-15-56-09-070_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド" height="500">
-<img src=".\img\Screenshot_2026-08-06-15-56-10-937_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド" height="500">
+<img src=".\img\Screenshot_2026-08-06-15-56-03-926_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド1" height="500">
+<img src=".\img\Screenshot_2026-08-06-15-56-06-196_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド2" height="500">
+<img src=".\img\Screenshot_2026-08-06-15-56-09-070_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド3" height="500">
+<img src=".\img\Screenshot_2026-08-06-15-56-10-937_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド4" height="500">
 
 <br>`開始`を押して次へ進む。
 
-<img src=".\img\Screenshot_2026-08-06-15-56-14-371_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド" height="500">
+<img src=".\img\Screenshot_2026-08-06-15-56-14-371_com.xiaomi.wearable.jpg" alt="Mi Fitness開始" height="500">
 
 <br>バンド接続保護の警告が出るが、設定しなくてよい。ウィンドウ外をタップしてエスケープ。
 
-<img src=".\img\Screenshot_2026-08-06-15-56-22-730_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド" height="500">
+<img src=".\img\Screenshot_2026-08-06-15-56-22-730_com.xiaomi.wearable.jpg" alt="バンド接続保護警告" height="500">
 
 <br>以上でスマートフォンとSmart Bandの接続は完了しました。
+
+## 3. Smart BandのGadgetbridgeへの接続
+Smart Bandとの通信を制御できるようにするために、Gadgetbridgeというオープンソースアプリを利用する。
+
+### 3.1 Gadgetbridgeのインストール
+GadgetbridgeはGoogleStoreにもあるが、バージョンが古く使えないので、F-Droidというアプリストアから最新版をインストールする。
+
+[F-Droid](https://f-droid.org/ja/)の検索バーから`gadgetbridge`で検索。
+<br>無印のGadgetbirdgeを選択。
+
+<img src=".\img\Screenshot_2026-08-06-16-01-19-092_com.android.chrome.jpg" alt="FDroid_gadgetbridge検索" height="500">
+<img src=".\img\Screenshot_2026-08-06-16-01-31-931_com.android.chrome.jpg" alt="FDroid_gadgetbirdge選択" height="500">
+
+<br>Gadgetbridgeのページで、下にスクロールすると最新版がある（`提案`と書いてあるもの。本記事製作時点ではver.0.92.2）。<br>同ブロックの最下部にある`APKをダウンロード`を押し、APKファイルをダウンロードする。
+
+<img src=".\img\Screenshot_2026-08-06-16-01-41-882_com.android.chrome.jpg" alt="FDroid_gadgetbirdge" height="500">
+<img src=".\img\Screenshot_2026-08-06-16-02-05-314_com.android.chrome.jpg" alt="FDroid_gadgetbirdge_latest_top" height="500">
+<img src=".\img\Screenshot_2026-08-06-16-02-16-160_com.android.chrome.jpg" alt="FDroid_gadgetbirdge_latest_bottom" height="500">
+
+<br>スマートフォンのエクスプローラーアプリからダウンロードしたAPKファイルを探し、実行。
+
+<img src=".\img\Screenshot_2026-08-06-16-04-01-600_com.mi.android.globalFileexplorer.jpg" alt="エクスプローラー" height="500">
+
+<br>Gadgetbridgeアプリがインストールされる。
+
+<img src=".\img\Screenshot_2026-08-06-16-05-15-225_com.miui.home.jpg" alt="フォルダー" height="500">
+
+### 3.2 Gadgetbridgeの権限設定
+Gadgetbridgeアプリを開くと、アプリ権限の許可の画面が出てくる。
+- `Background location`
+- `Bluetooth connect`
+- `Bluetooth scan`
+- `Display over other apps`
+- `Fine location`
+- `Ignore battery optimizations`
+- `Post notifications`
+- `Query all packages`
+- `通知`
+
+を最低限許可するとよい。
+
+<img src=".\img\Screenshot_2026-08-06-16-05-53-504_nodomain.freeyourgadget.gadgetbridge.jpg" alt="gb_permissions" height="500">
+
+<br>`通知の管理`などの権限は、「制限付き設定」を許可しなければ許可できない。<br>設定のアプリ情報から、`制限付き設定を許可`を許可する。
+
+<img src=".\img\Screenshot_2026-08-06-16-07-51-281_com.miui.securitycenter.jpg" alt="gb_アプリ情報" height="500">
+<img src=".\img\Screenshot_2026-08-06-16-08-13-412_com.miui.securitycenter.jpg" alt="gb_制限付き設定を許可_不許可" height="500">
+<img src=".\img\Screenshot_2026-08-06-16-08-18-616_com.miui.securitycenter.jpg" alt="gb_制限付き設定を許可_許可" height="500">
+
+<br>`Get started`の画面で、一旦`Go to app`に進む。
+
+<img src=".\img\Screenshot_2026-08-06-16-09-14-700_nodomain.freeyourgadget.gadgetbridge.jpg" alt="gb_Get_started" height="500">
+
+### 3.3 Smart BandデバイスのID取得
+GadgetbridgeにSmart Bandを接続するには、Smart Bandのtokenを取得する必要がある。
+<br>[Xiaomi Cloud Tokens Extractor](https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor)にある[token_extratcor.exe](https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor/releases/latest/download/token_extractor.exe)をインストール、実行する。
+
+<img src=".\img\スクリーンショット 2026-09-14 014839.png" alt="Xiaomi Cloud Tokens Extractor" height="500">
+<img src=".\img\スクリーンショット 2026-08-06 155807.png" alt="token_extractor.exe" height="500">
+
+<br>QRコード経由が便利なので、`q`を入力。<br>表示されたurlにブラウザでアクセスし、スマートフォンで読み取る。
+
+<img src=".\img\スクリーンショット 2026-08-06 155820.png" alt="te_q" height="500">
+<img src=".\img\スクリーンショット 2026-08-06 155832.png" alt="te_qr_url" height="500">
+
+<br>[1.3節](#13-xiaomiアカウントの作成)で作成したXiaomiアカウントにサインインする。
+
+<img src=".\img\Screenshot_2026-08-06-15-59-09-092_com.xiaomi.account.jpg" alt="te_signin" height="500">
+<img src=".\img\Screenshot_2026-08-06-15-59-13-948_com.xiaomi.account.jpg" alt="te_signedin" height="500">
+
+<br>`Logged in.`となり、`Select server`と出るが、空欄のままEnter。
+
+<img src=".\img\スクリーンショット 2026-08-06 155925.png" alt="te_Select_server" height="500">
+
+<br>出力されたもののいずれかの`TOKEN`の文字列が、接続に必要なtokenである（すべて同じものになるはず）。
+
+<img src=".\img\スクリーンショット 2026-08-06 155956.png" alt="te_ids" height="500">
+
+
+
+
+<img src=".\img\" alt="" height="500">

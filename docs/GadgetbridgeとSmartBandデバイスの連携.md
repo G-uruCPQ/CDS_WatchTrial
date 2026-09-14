@@ -40,7 +40,7 @@ Mi Fitnessアプリ下の`プロフィール`タブを選択し、`サインイ�
 ### 2.1 Smart Bandの起動
 充電ケーブルでSmart Bandを電源に接続し、起動する。
 
-<img alt="MiBand電源接続" height="500">
+<img src=".\img\PXL_20260826_012811254.jpg" alt="MiBand電源接続" height="500">
 
 <br>言語選択で`日本語`を選択する。
 
@@ -148,7 +148,7 @@ Gadgetbridgeアプリを開くと、アプリ権限の許可の画面が出て�
 <img src=".\img\Screenshot_2026-08-06-16-08-13-412_com.miui.securitycenter.jpg" alt="gb_制限付き設定を許可_不許可" height="500">
 <img src=".\img\Screenshot_2026-08-06-16-08-18-616_com.miui.securitycenter.jpg" alt="gb_制限付き設定を許可_許可" height="500">
 
-<br>`Get started`の画面で、一旦`Go to app`に進む。
+<br>`Get started`の画面で、一旦`Go to the app`に進む。
 
 <img src=".\img\Screenshot_2026-08-06-16-09-14-700_nodomain.freeyourgadget.gadgetbridge.jpg" alt="gb_Get_started" height="500">
 

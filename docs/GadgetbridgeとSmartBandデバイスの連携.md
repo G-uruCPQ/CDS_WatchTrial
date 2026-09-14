@@ -1,4 +1,8 @@
 # GadgetbridgeとSmart Bandデバイスの連携
+
+Xiaomi Smart Band 10をAndroidスマートフォンに接続し、同デバイスをGadgetbridgeアプリで利用できるようにするまでの一連の流れを示す。<br>
+本記事において、スマートフォンはXiaomi REDME 15を利用したが、他のAndroidスマートフォン（Google Pixcelなど）においても、同様の設定を進めることで連携が可能である。
+
 ## 1. Mi Fitnessのインストール・初期設定
 ### 1.1 Mi Fitnessアプリのインストール
 GooglePlayストアからMi Fitnessアプリをインストールする。
@@ -174,7 +178,28 @@ GadgetbridgeにSmart Bandを接続するには、Smart Bandのtokenを取得す�
 
 <img src=".\img\スクリーンショット 2026-08-06 155956.png" alt="te_ids" height="500">
 
+### 3.4 Mi Fitnessアプリのアンインストール
+Mi FitnessアプリとGadgetbridgeのbluetooth干渉回避のため、Mi Fitnessアプリをアンインストールする。
 
+<img src=".\img\Screenshot_2026-08-06-16-10-18-897_com.miui.home.jpg" alt="mf_uninstall" height="500">
 
+### 3.5 Smart Bandの接続
+GadgetbridgeアプリのUI左上三本線からドロワーを開き、`新しいデバイスに接続`を選択。
 
-<img src=".\img\" alt="" height="500">
+<img src=".\img\Screenshot_2026-08-06-16-10-34-363_nodomain.freeyourgadget.gadgetbridge.jpg" alt="gb_drwermenu" height="500">
+
+<br>自分の利用しているSmart Bandを選択する。<br>MACアドレスが一致するものを探すとよい。
+
+<img src=".\img\Screenshot_2026-08-06-16-10-46-937_nodomain.freeyourgadget.gadgetbridge.jpg" alt="gb_choose_device" height="500">
+
+<br>[3.3節](#33-smart-bandデバイスのid取得)で取得したtokenを認証キーとして入力する。
+
+<img src=".\img\Screenshot_2026-08-06-16-10-52-513_nodomain.freeyourgadget.gadgetbridge.jpg" alt="gb_token" height="500">
+
+<br>Companion deviceのメッセージが出るが`はい`で進む。
+
+<img src=".\img\Screenshot_2026-08-06-16-12-08-641_nodomain.freeyourgadget.gadgetbridge.jpg" alt="gb_companion" height="500">
+
+<br>デバイスタブにて`接続済み`の表示が出ていたら成功。
+
+<img src=".\img\Screenshot_2026-08-06-16-14-02-402_nodomain.freeyourgadget.gadgetbridge.jpg" alt="connected" height="500">

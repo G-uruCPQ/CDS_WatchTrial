@@ -15,10 +15,10 @@
 はじめて利用する場合は、以下の順番で確認してください。
 
 1. GadgetbridgeとSmart Bandの接続
-   → docs/gadgetbridge/gadgetbridge-smartband-setup.md
+   → docs/GadgetbridgeとSmartBandデバイスの連携/GadgetbridgeとSmartBandデバイスの連携.md
 
 2. Raspberry PiからSmart Bandへ通知を送る
-   → docs/vibration/vibration-notification-guide.md
+   → docs/手順書_バイブレーション機能/創造性開発セミナー手順書_バイブレーション機能.pdf
 
 ## サンプルプログラム
 

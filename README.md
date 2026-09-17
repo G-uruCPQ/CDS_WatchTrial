@@ -61,15 +61,17 @@ Raspberry Pi上で実行するプログラムの例です。
 本プログラムではPythonの`requests`パッケージを使用します。
 
 ## ディレクトリ構成
-CDS_WatchTrial<br>
-├─ README.md<br>
-├─ docs/<br>
-│  ├─ GadgetbridgeとSmartBandデバイスの連携/<br>
-│  └─ 遠隔バイブレーション手順書/<br>
-└─ samples/<br>
-   └─ vibration/<br>
-      ├─ samplecode_for_raspberrypi.py<br>
-      └─ server_for_smartphone_sample_code.py
+```
+CDS_WatchTrial
+├─ README.md
+├─ docs/
+│   ├─ GadgetbridgeとSmartBandデバイスの連携/
+│   └─ 遠隔バイブレーション手順書/
+└─ samples/
+    └─ vibration/
+        ├─ samplecode_for_raspberrypi.py
+        └─ server_for_smartphone_sample_code.py
+```
 
 ## 注意事項
 - 学生が利用する場合は、原則として`main`branchの内容を参照してください。

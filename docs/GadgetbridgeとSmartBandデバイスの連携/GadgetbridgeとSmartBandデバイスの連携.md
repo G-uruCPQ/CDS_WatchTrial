@@ -100,7 +100,7 @@ Smart BandをMi FitnessではなくGadgetbridgeから利用できるようにす
 
 <img src=".\img\Screenshot_2026-08-06-16-01-19-092_com.android.chrome.jpg" alt="FDroid_gadgetbridge検索" height="500"> <img src=".\img\Screenshot_2026-08-06-16-01-31-931_com.android.chrome.jpg" alt="FDroid_gadgetbirdge選択" height="500">
 
-<br>Gadgetbridgeのページで下にスクロールし、`提案`と表示されているバージョンを確認する（本記事製作時点ではver.0.92.2）。<br>同ブロックの最下部にある`APKをダウンロード`を押し、APKファイルをダウンロードする。
+<br>Gadgetbridgeのページで下にスクロールし、`提案`と表示されているバージョンを確認する。画面例ではバージョンが異なる場合がある。<br>同ブロックの最下部にある`APKをダウンロード`を押し、APKファイルをダウンロードする。
 
 <img src=".\img\Screenshot_2026-08-06-16-01-41-882_com.android.chrome.jpg" alt="FDroid_gadgetbirdge" height="500"> <img src=".\img\Screenshot_2026-08-06-16-02-05-314_com.android.chrome.jpg" alt="FDroid_gadgetbirdge_latest_top" height="500"> <img src=".\img\Screenshot_2026-08-06-16-02-16-160_com.android.chrome.jpg" alt="FDroid_gadgetbirdge_latest_bottom" height="500">
 

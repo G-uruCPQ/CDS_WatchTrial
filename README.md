@@ -33,11 +33,13 @@ Smart Band
 はじめて利用する場合は、以下の順番で確認してください。
 
 1. GadgetbridgeとSmart Bandの接続
+
    [GadgetbridgeとSmart Bandデバイスの連携](./docs/GadgetbridgeとSmartBandデバイスの連携/GadgetbridgeとSmartBandデバイスの連携.md)
 
    SmartBandをAndroidスマートフォンへ接続し、Gadgetbridgeから利用できる状態にします。
 
 2. Raspberry PiからSmart Bandへ通知を送る
+
    [遠隔バイブレーション手順書](./docs/遠隔バイブレーション手順書/遠隔バイブレーション手順書.md)
 
    Androidスマートフォン上でサーバを起動し、Raspberry PiからHTTPリクエストを送信します。
@@ -59,14 +61,14 @@ Raspberry Pi上で実行するプログラムの例です。
 本プログラムではPythonの`requests`パッケージを使用します。
 
 ## ディレクトリ構成
-CDS_WatchTrial
-├─ README.md
-├─ docs/
-│  ├─ GadgetbridgeとSmartBandデバイスの連携/
-│  └─ 遠隔バイブレーション手順書/
-└─ samples/
-   └─ vibration/
-      ├─ samplecode_for_raspberrypi.py
+CDS_WatchTrial<br>
+├─ README.md<br>
+├─ docs/<br>
+│  ├─ GadgetbridgeとSmartBandデバイスの連携/<br>
+│  └─ 遠隔バイブレーション手順書/<br>
+└─ samples/<br>
+   └─ vibration/<br>
+      ├─ samplecode_for_raspberrypi.py<br>
       └─ server_for_smartphone_sample_code.py
 
 ## 注意事項

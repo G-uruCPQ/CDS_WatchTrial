@@ -14,7 +14,7 @@
 
 Raspberry Pi<br>
 ↓ HTTP通信<br>
-Andriodスマートフォン<br>
+Androidスマートフォン<br>
 ↓ Gadgetbridge<br>
 Smart Band
 
@@ -25,6 +25,10 @@ Smart Band
 - Xiaomi Smart Band 10
 - Gadgetbridge
 - Python 3
+
+セットアップやサンプルプログラムの実行時には、
+Mi Fitness、Xiaomi Cloud Tokens Extractor、Termux等も使用します。
+詳細は各手順書を参照してください。
 
 ※ Androidのバージョンやスマートフォンの機種によって、画面表示や設定項目が異なる場合があります。
 

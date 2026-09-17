@@ -17,24 +17,20 @@ Mi Fitnessアプリを開き、`開始`を押す。
 
 <br>使用条件に同意し、地域を日本に設定する。
 
-<img src=".\img\Screenshot_2026-08-06-15-44-30-820_com.xiaomi.wearable.jpg" alt="使用条件同意" height="500">
-<img src=".\img\Screenshot_2026-08-06-15-44-45-608_com.xiaomi.wearable.jpg" alt="地域設定" height="500">
+<img src=".\img\Screenshot_2026-08-06-15-44-30-820_com.xiaomi.wearable.jpg" alt="使用条件同意" height="500"> <img src=".\img\Screenshot_2026-08-06-15-44-45-608_com.xiaomi.wearable.jpg" alt="地域設定" height="500">
 
 <br>身体活動データへのアクセスを許可する。
 
-<img src=".\img\Screenshot_2026-08-06-15-44-51-982_com.xiaomi.wearable.jpg" alt="アクセス許可" height="500">
-<img src=".\img\Screenshot_2026-08-06-15-44-58-497_com.google.android.permissioncontroller.jpg" alt="身体活動データアクセス" height="500">
+<img src=".\img\Screenshot_2026-08-06-15-44-51-982_com.xiaomi.wearable.jpg" alt="アクセス許可" height="500"> <img src=".\img\Screenshot_2026-08-06-15-44-58-497_com.google.android.permissioncontroller.jpg" alt="身体活動データアクセス" height="500">
 
 ### 1.3 Xiaomiアカウントの作成
-Mi Fitnessアプリ下の`プロフィール`タブを選択し、`サインイン`をお明日。
+Mi Fitnessアプリ下の`プロフィール`タブを選択し、`サインイン`を押す。
 
-<img src=".\img\Screenshot_2026-08-06-15-45-33-128_com.xiaomi.wearable.jpg" alt="初期設定完了" height="500">
-<img src=".\img\Screenshot_2026-08-06-15-45-41-232_com.xiaomi.wearable.jpg" alt="プロフィール画面" height="500">
+<img src=".\img\Screenshot_2026-08-06-15-45-33-128_com.xiaomi.wearable.jpg" alt="初期設定完了" height="500"> <img src=".\img\Screenshot_2026-08-06-15-45-41-232_com.xiaomi.wearable.jpg" alt="プロフィール画面" height="500">
 
 <br>サインイン画面下部の`アカウントを作成`を押し、画面の指示に従ってXiaomiアカウントを作成する。
 
-<img src=".\img\PXL_20260806_064617421.jpg" alt="Xiaomiアカウントにサインイン" height="500">
-<img src=".\img\PXL_20260806_064644318.jpg" alt="Xiaomiアカウントを作成" height="500">
+<img src=".\img\PXL_20260806_064617421.jpg" alt="Xiaomiアカウントにサインイン" height="500"> <img src=".\img\PXL_20260806_064644318.jpg" alt="Xiaomiアカウントを作成" height="500">
 
 ## 2. Smart Bandのスマートフォンへの接続
 ### 2.1 Smart Bandの起動
@@ -53,8 +49,7 @@ Mi Fitnessアプリ下の`プロフィール`タブを選択し、`サインイ�
 
 <br>Mi Fitnessアプリ下の`デバイス`タブを選択し、`デバイスを追加`を押す。
 
-<img src=".\img\Screenshot_2026-08-06-15-45-33-128_com.xiaomi.wearable.jpg" alt="初期設定完了" height="500">
-<img src=".\img\Screenshot_2026-08-06-15-51-30-404_com.xiaomi.wearable.jpg" alt="デバイス画面" height="500">
+<img src=".\img\Screenshot_2026-08-06-15-45-33-128_com.xiaomi.wearable.jpg" alt="初期設定完了" height="500"> <img src=".\img\Screenshot_2026-08-06-15-51-30-404_com.xiaomi.wearable.jpg" alt="デバイス画面" height="500">
 
 <br>Bluetoothによるデータ転送を許可する。
 
@@ -62,13 +57,11 @@ Mi Fitnessアプリ下の`プロフィール`タブを選択し、`サインイ�
 
 <br>付近のBluetoothデバイスの検出を許可する。
 
-<img src=".\img\Screenshot_2026-08-06-15-51-59-850_com.xiaomi.wearable.jpg" alt="Bluetoothデバイス検出許可" height="500">
-<img src=".\img\Screenshot_2026-08-06-15-52-05-413_com.google.android.permissioncontroller.jpg" alt="付近のデバイス検出許可" height="500">
+<img src=".\img\Screenshot_2026-08-06-15-51-59-850_com.xiaomi.wearable.jpg" alt="Bluetoothデバイス検出許可" height="500"> <img src=".\img\Screenshot_2026-08-06-15-52-05-413_com.google.android.permissioncontroller.jpg" alt="付近のデバイス検出許可" height="500">
 
 <br>Smart Bandが検出されたら、スマートフォン側で`ペア設定をする`を押す。続いて、Smart Band側に表示されるチェックマークを押し、ペア設定を承認する。
 
-<img src=".\img\Screenshot_2026-08-06-15-53-24-329_com.android.settings.jpg" alt="MiFitnessペア設定" height="500">
-<img src=".\img\PXL_20260806_065505932.jpg" alt="MiBandペア設定" height="500">
+<img src=".\img\Screenshot_2026-08-06-15-53-24-329_com.android.settings.jpg" alt="MiFitnessペア設定" height="500"> <img src=".\img\PXL_20260806_065505932.jpg" alt="MiBandペア設定" height="500">
 
 <br>Smart Bandとスマートフォンの接続完了。次へ進む。
 
@@ -76,9 +69,7 @@ Mi Fitnessアプリ下の`プロフィール`タブを選択し、`サインイ�
 
 <br>以降もいくつか設定項目が表示されるが、本手順では最終的にMi Fitnessを使用しないため、任意の設定で進めてよい。
 
-<img src=".\img\Screenshot_2026-08-06-15-55-38-270_com.xiaomi.wearable.jpg" alt="Mi Fitnessアプリ通知設定" height="500">
-<img src=".\img\Screenshot_2026-08-06-15-55-46-225_com.xiaomi.wearable.jpg" alt="Mi Fitnessアプリ着信設定" height="500">
-<img src=".\img\Screenshot_2026-08-06-15-55-50-918_com.xiaomi.wearable.jpg" alt="Mi Fitnessアプリシステム情報同期設定" height="500">
+<img src=".\img\Screenshot_2026-08-06-15-55-38-270_com.xiaomi.wearable.jpg" alt="Mi Fitnessアプリ通知設定" height="500"> <img src=".\img\Screenshot_2026-08-06-15-55-46-225_com.xiaomi.wearable.jpg" alt="Mi Fitnessアプリ着信設定" height="500"> <img src=".\img\Screenshot_2026-08-06-15-55-50-918_com.xiaomi.wearable.jpg" alt="Mi Fitnessアプリシステム情報同期設定" height="500">
 
 <br>装着ガイドを読み、次へ進む。
 
@@ -86,10 +77,7 @@ Mi Fitnessアプリ下の`プロフィール`タブを選択し、`サインイ�
 
 <br>以降Smart Bandの使い方を読みながら、`次へ`で進む。
 
-<img src=".\img\Screenshot_2026-08-06-15-56-03-926_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド1" height="500">
-<img src=".\img\Screenshot_2026-08-06-15-56-06-196_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド2" height="500">
-<img src=".\img\Screenshot_2026-08-06-15-56-09-070_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド3" height="500">
-<img src=".\img\Screenshot_2026-08-06-15-56-10-937_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド4" height="500">
+<img src=".\img\Screenshot_2026-08-06-15-56-03-926_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド1" height="500"> <img src=".\img\Screenshot_2026-08-06-15-56-06-196_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド2" height="500"> <img src=".\img\Screenshot_2026-08-06-15-56-09-070_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド3" height="500"> <img src=".\img\Screenshot_2026-08-06-15-56-10-937_com.xiaomi.wearable.jpg" alt="Mi Fitnessガイド4" height="500">
 
 <br>`開始`を押して次へ進む。
 
@@ -110,14 +98,11 @@ Smart BandをMi FitnessではなくGadgetbridgeから利用できるようにす
 [F-Droid公式サイト](https://f-droid.org/ja/)を開き、検索バーから`gadgetbridge`で検索する。
 <br>検索結果から、無印のGadgetbridgeを選択。
 
-<img src=".\img\Screenshot_2026-08-06-16-01-19-092_com.android.chrome.jpg" alt="FDroid_gadgetbridge検索" height="500">
-<img src=".\img\Screenshot_2026-08-06-16-01-31-931_com.android.chrome.jpg" alt="FDroid_gadgetbirdge選択" height="500">
+<img src=".\img\Screenshot_2026-08-06-16-01-19-092_com.android.chrome.jpg" alt="FDroid_gadgetbridge検索" height="500"> <img src=".\img\Screenshot_2026-08-06-16-01-31-931_com.android.chrome.jpg" alt="FDroid_gadgetbirdge選択" height="500">
 
-<br>Gadgetbridgeのページで下にスクロールし、`提案`と表示されているバージョンを確認する（本記事製作時点ではver.0.92.2）。<br>同ブロックの最下部にある`APKをダウンロード`を押し、APKファイルをダウンロードする。
+<br>Gadgetbridgeのページで下にスクロールし、`提案`と表示されているバージョンを確認する。画面例ではバージョンが異なる場合がある。<br>同ブロックの最下部にある`APKをダウンロード`を押し、APKファイルをダウンロードする。
 
-<img src=".\img\Screenshot_2026-08-06-16-01-41-882_com.android.chrome.jpg" alt="FDroid_gadgetbirdge" height="500">
-<img src=".\img\Screenshot_2026-08-06-16-02-05-314_com.android.chrome.jpg" alt="FDroid_gadgetbirdge_latest_top" height="500">
-<img src=".\img\Screenshot_2026-08-06-16-02-16-160_com.android.chrome.jpg" alt="FDroid_gadgetbirdge_latest_bottom" height="500">
+<img src=".\img\Screenshot_2026-08-06-16-01-41-882_com.android.chrome.jpg" alt="FDroid_gadgetbirdge" height="500"> <img src=".\img\Screenshot_2026-08-06-16-02-05-314_com.android.chrome.jpg" alt="FDroid_gadgetbirdge_latest_top" height="500"> <img src=".\img\Screenshot_2026-08-06-16-02-16-160_com.android.chrome.jpg" alt="FDroid_gadgetbirdge_latest_bottom" height="500">
 
 <br>スマートフォンのエクスプローラーアプリからダウンロードしたAPKファイルを探し、実行。
 
@@ -144,9 +129,7 @@ Gadgetbridgeアプリを開くと、アプリ権限の許可の画面が出て�
 
 <br>`通知の管理`など一部の権限を有効にするには、Android側で`制限付き設定`を許可する必要がある。<br>Androidの設定からGadgetbridgeの`アプリ情報`を開き、`制限付き設定を許可`を許可する。
 
-<img src=".\img\Screenshot_2026-08-06-16-07-51-281_com.miui.securitycenter.jpg" alt="gb_アプリ情報" height="500">
-<img src=".\img\Screenshot_2026-08-06-16-08-13-412_com.miui.securitycenter.jpg" alt="gb_制限付き設定を許可_不許可" height="500">
-<img src=".\img\Screenshot_2026-08-06-16-08-18-616_com.miui.securitycenter.jpg" alt="gb_制限付き設定を許可_許可" height="500">
+<img src=".\img\Screenshot_2026-08-06-16-07-51-281_com.miui.securitycenter.jpg" alt="gb_アプリ情報" height="500"> <img src=".\img\Screenshot_2026-08-06-16-08-13-412_com.miui.securitycenter.jpg" alt="gb_制限付き設定を許可_不許可" height="500"> <img src=".\img\Screenshot_2026-08-06-16-08-18-616_com.miui.securitycenter.jpg" alt="gb_制限付き設定を許可_許可" height="500">
 
 <br>`Get started`の画面で、一旦`Go to the app`に進む。
 
@@ -156,18 +139,15 @@ Gadgetbridgeアプリを開くと、アプリ権限の許可の画面が出て�
 GadgetbridgeからSmart Bandへ接続するために必要な認証tokenを取得する。
 <br>[Xiaomi Cloud Tokens Extractor](https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor)のリリースページから[`token_extractor.exe`](https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor/releases/latest/download/token_extractor.exe)をPCにダウンロードし、実行する。
 
-<img src=".\img\スクリーンショット 2026-09-14 014839.png" alt="Xiaomi Cloud Tokens Extractor" height="500">
-<img src=".\img\スクリーンショット 2026-08-06 155807.png" alt="token_extractor.exe" height="500">
+<img src=".\img\スクリーンショット 2026-09-14 014839.png" alt="Xiaomi Cloud Tokens Extractor" height="500"> <img src=".\img\スクリーンショット 2026-08-06 155807.png" alt="token_extractor.exe" height="500">
 
 <br>QRコードを利用してログインするため、`q`を入力する。<br>表示されたURLをPCのブラウザで開き、表示されたQRコードをスマートフォンで読み取る。
 
-<img src=".\img\スクリーンショット 2026-08-06 155820.png" alt="te_q" height="500">
-<img src=".\img\スクリーンショット 2026-08-06 155832.png" alt="te_qr_url" height="500">
+<img src=".\img\スクリーンショット 2026-08-06 155820.png" alt="te_q" height="500"> <img src=".\img\スクリーンショット 2026-08-06 155832.png" alt="te_qr_url" height="500">
 
 <br>[1.3節](#13-xiaomiアカウントの作成)で作成したXiaomiアカウントにサインインする。
 
-<img src=".\img\Screenshot_2026-08-06-15-59-09-092_com.xiaomi.account.jpg" alt="te_signin" height="500">
-<img src=".\img\Screenshot_2026-08-06-15-59-13-948_com.xiaomi.account.jpg" alt="te_signedin" height="500">
+<img src=".\img\Screenshot_2026-08-06-15-59-09-092_com.xiaomi.account.jpg" alt="te_signin" height="500"> <img src=".\img\Screenshot_2026-08-06-15-59-13-948_com.xiaomi.account.jpg" alt="te_signedin" height="500">
 
 <br>`Logged in.`となり、`Select server`と出るが、空欄のままEnter。
 
@@ -191,7 +171,7 @@ Gadgetbridgeアプリ画面左上の三本線のアイコンを押してメニ�
 
 <img src=".\img\Screenshot_2026-08-06-16-10-46-937_nodomain.freeyourgadget.gadgetbridge.jpg" alt="gb_choose_device" height="500">
 
-<br>[3.3節](#33-smart-bandデバイスのid取得)で取得したtokenを認証キーとして入力する。
+<br>[3.3節](#33-smart-bandの認証tokenの取得)で取得したtokenを認証キーとして入力する。
 
 <img src=".\img\Screenshot_2026-08-06-16-10-52-513_nodomain.freeyourgadget.gadgetbridge.jpg" alt="gb_token" height="500">
 
@@ -202,3 +182,6 @@ Gadgetbridgeアプリ画面左上の三本線のアイコンを押してメニ�
 <br>`デバイス`タブを開き、Smart Bandに`接続済み`と表示されていれば設定完了。
 
 <img src=".\img\Screenshot_2026-08-06-16-14-02-402_nodomain.freeyourgadget.gadgetbridge.jpg" alt="connected" height="500">
+
+---
+**Author: [Chi-robot](https://github.com/G-uruCPQ)** | Date: 2026-09-15

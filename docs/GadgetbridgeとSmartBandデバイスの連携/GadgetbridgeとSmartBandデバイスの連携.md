@@ -24,7 +24,7 @@ Mi Fitnessアプリを開き、`開始`を押す。
 <img src=".\img\Screenshot_2026-08-06-15-44-51-982_com.xiaomi.wearable.jpg" alt="アクセス許可" height="500"> <img src=".\img\Screenshot_2026-08-06-15-44-58-497_com.google.android.permissioncontroller.jpg" alt="身体活動データアクセス" height="500">
 
 ### 1.3 Xiaomiアカウントの作成
-Mi Fitnessアプリ下の`プロフィール`タブを選択し、`サインイン`をお明日。
+Mi Fitnessアプリ下の`プロフィール`タブを選択し、`サインイン`を押す。
 
 <img src=".\img\Screenshot_2026-08-06-15-45-33-128_com.xiaomi.wearable.jpg" alt="初期設定完了" height="500"> <img src=".\img\Screenshot_2026-08-06-15-45-41-232_com.xiaomi.wearable.jpg" alt="プロフィール画面" height="500">
 
@@ -171,7 +171,7 @@ Gadgetbridgeアプリ画面左上の三本線のアイコンを押してメニ�
 
 <img src=".\img\Screenshot_2026-08-06-16-10-46-937_nodomain.freeyourgadget.gadgetbridge.jpg" alt="gb_choose_device" height="500">
 
-<br>[3.3節](#33-smart-bandデバイスのid取得)で取得したtokenを認証キーとして入力する。
+<br>[3.3節](#33-smart-bandの認証tokenの取得)で取得したtokenを認証キーとして入力する。
 
 <img src=".\img\Screenshot_2026-08-06-16-10-52-513_nodomain.freeyourgadget.gadgetbridge.jpg" alt="gb_token" height="500">
 

@@ -87,4 +87,4 @@ CDS_WatchTrial
 手順書の誤りやサンプルプログラムの不具合を発見した場合は、TAへ連絡してください。
 
 ---
-**Author: [Chi-robot](https://github.com/G-uruCPQ/)** | Date: 2026-09-18
+**Author: [Chi-robot](https://github.com/G-uruCPQ/), [sugiura](https://github.com/iruru0422)** | Date: 2026-09-18

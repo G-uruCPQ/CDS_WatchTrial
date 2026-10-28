@@ -130,11 +130,12 @@ class GadgetbridgeDB:
 
       # 歩数：0步も有効
       row = self._fetch_one(conn, """
-        SELECT TIMESTAMP, STEP AS value
+        -- 歩数
+        SELECT TIMESTAMP, STEPS AS value
         FROM XIAOMI_ACTIVITY_SAMPLE
         WHERE DEVICE_ID = ?
         ORDER BY TIMESTAMP DESC
-        LIMIT 1
+        LIMIT 1;
       """, (self.device_id,))
       store("steps", row)
 
@@ -148,24 +149,26 @@ class GadgetbridgeDB:
 
       for key, (column, condition) in metrics.items():
         sql = f"""
+          -- 心拍数・ストレス・SpO₂
           SELECT TIMESTAMP, {column} AS value
-          FROM XIAOMI_ACTVITY_SAMPLE
+          FROM XIAOMI_ACTIVITY_SAMPLE
           WHERE DEVICE_ID = ?
             AND {condition}
           ORDER BY TIMESTAMP DESC
-          LIMIT 1
+          LIMIT 1;
         """
         row = self._fetch_one(conn, sql, (self.device_id,))
         store(key, row)
 
       # バッテリー残量
       row = self._fetch_one(conn, """
+        -- バッテリー残量
         SELECT TIMESTAMP, LEVEL AS value
         FROM BATTERY_LEVEL
         WHERE DEVICE_ID = ?
           AND BATTERY_INDEX = 0
-        ORDER BYTIMESTAMP DESC
-        LIMIT 1
+        ORDER BY TIMESTAMP DESC
+        LIMIT 1;
       """, (self.device_id,))
       store("battery_level", row)
 

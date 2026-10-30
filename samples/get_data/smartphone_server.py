@@ -1,6 +1,9 @@
 import subprocess
 import threading
+import traceback
 import time
+import json
+import sqlite3
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 import urllib.parse
@@ -53,13 +56,32 @@ class RequestHandler(BaseHTTPRequestHandler):
 
       # 未定義のエンドポイント
       else:
-        self.send_response(404)
-        self.end_headers()
-    except Exception as e:
-      print(f"Error handling request: {e}")
-      self.send_response(500)
+        status_code = 404
+        data = {"error": "Endpoint not found"}
+
+    except (OSError, sqlite3.Error):
+      self.log_error("Database error:\n%s", traceback.format_exc())
+      status_code = 500
+      data = {"error": "Database access failed"}
+    except Exception:
+      self.log_error("Unexpected error:\n%s", traceback.format_exc())
+      status_code = 500
+      data = {"error": "Internal server error"}
+    
+    # HTTPレスポンス送信
+    try:
+      body = json.dumps(data, ensure_ascii=False).encode("utf-8")
+
+      self.send_response(status_code)
+
+      self.send_header("Content-Type", "application/json; charset=utf-8")
+      self.send_header("Content-Length", str(len(body)))
+      self.send_header("Cache-Control", "no-store")
+
       self.end_headers()
-      self.wfile.write(f"ERROR: {str(e)}\n".encode("utf-8"))
+      self.wfile.write(body)
+    except (BrokenPipeError, ConnectionResetError):
+      self.log_message("Client disconnected")
 
 # 一定時間アクセスがないかを監視するバックグラウンド関数
 def idle_watcher():

@@ -1,9 +1,10 @@
-import subprocess
 import threading
 import traceback
 import time
 import json
+import re
 import sqlite3
+from datetime import date
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 import urllib.parse
@@ -44,15 +45,36 @@ class RequestHandler(BaseHTTPRequestHandler):
     try:
       # 最新の測定データ
       if path == "/data/latest":
-        pass
+        status_code = 200
+        data = reader.get_latest()
 
       # 日次集計データ
       elif path == "/data/daily":
-        pass
+        status_code = 200
+        day = None
+        if "day" not in query:
+          data = reader.get_daily()
+        else:
+          values = query["day"]
+          if (len(values) == 1 and re.fullmatch(r"\d{4}-\d{2}-\d{2}", values[0])):
+            day = values[0]
+            try:
+              date.fromisoformat(day)
+            except ValueError:
+              status_code = 400; data = {"error": "Invalid calendar date"}
+            else:
+              data = reader.get_daily(day=day)
+          else:
+            status_code = 400; data = {"error": "day must be YYYY-MM-DD"}
 
       # DBファイルの更新状況
       elif path == "/data/status":
-        pass
+        status_code = 200
+        modified_at = int(DB_PATH.stat().st_mtime)
+        data = {
+          "database_file_modified_at": modified_at,
+          "database_file_age_seconds": int(time.time()) - modified_at
+        }
 
       # 未定義のエンドポイント
       else:

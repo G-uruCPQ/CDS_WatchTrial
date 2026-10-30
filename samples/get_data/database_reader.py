@@ -58,6 +58,49 @@ class GadgetbridgeDB:
     row = conn.execute(sql, params).fetchone()
     return dict(row) if row else None
 
+  # ===== 睡眠セッション取得 =====
+  def _get_sleep_sessions(self, day: str) -> list[dict]:
+    """
+    指定したJSTの起床日に属する睡眠セッションを取得する。
+
+    Args:
+      day (str): 起床日（YYYY-MM-DD）
+
+    Returns:
+      list[dict]: 睡眠セッションのリスト。
+                  データが無い場合は空リスト。
+                  時刻はUnix秒、時間は分
+    """
+    start = datetime.strptime(day, "%Y-%m-%d").replace(tzinfo=JST)
+    end = start + timedelta(days=1)
+
+    sql = """
+      SELECT *
+      FROM XIAOMI_SLEEP_TIME_SAMPLE
+      WHERE DEVICE_ID = ?
+        AND WAKEUP_TIME >= ?
+        AND WAKEUP_TIME < ?
+      ORDER BY WAKEUP_TIME
+    """
+
+    params = (self.device_id, int(start.timestamp() * 1000), int(end.timestamp() * 1000))
+
+    with closing(self._connect()) as conn:
+      rows = conn.execute(sql, params).fetchall()
+
+    return[
+      {
+        "sleep_start": row["TIMESTAMP"] // 1000,
+        "wakeup_time": row["WAKEUP_TIME"] // 1000 if row["WAKEUP_TIME"] is not None else None,
+        "total_duration": row["TOTAL_DURATION"],
+        "deep_sleep_duration": row["DEEP_SLEEP_DURATION"],
+        "light_sleep_duration": row["LIGHT_SLEEP_DURATION"],
+        "rem_sleep_duration": row["REM_SLEEP_DURATION"],
+        "awake_duration": row["AWAKE_DURATION"]
+      }
+      for row in rows
+    ]
+
   # ===== 最新の測定データ =====
 
   def get_latest(self) -> dict | None:
@@ -199,6 +242,20 @@ class GadgetbridgeDB:
           "heart_rate_max": int | None,
           "stress_avg": int | None,
           "spo2_avg": int | None
+          "sleep": {
+            "total_duration": int | None
+            "sessions": [
+              {
+                "sleep_start": int,
+                "wakeup_time": int | None,
+                "total_duration": int | None,
+                "deep_sleep_duration": int | None,
+                "light_sleep_duration": int | None,
+                "rem_sleep_duration": int | None,
+                "awake_duration": int | None
+              }
+            ]
+          }
         }
 
         Keys:
@@ -220,6 +277,8 @@ class GadgetbridgeDB:
             平均ストレス値（無次元）。
           spo2_avg:
             平均血中酸素飽和度 [%]。
+          sleep:
+            睡眠セクション。
 
     Notes:
       - 日次集計はGadgetbridgeに保存された値を使用する。
@@ -227,6 +286,11 @@ class GadgetbridgeDB:
       - 当日分は集計途中の可能性がある。
       - None指定時は今日ではなくDB内の最新日を返す。
       - 無効値の判定条件は解析結果に応じて更新する。
+      - 睡眠データは起床日を基準に集計する。
+      - 同日に複数の睡眠セッションがある場合、sessionsに全件格納する。
+      - total_durationは各セッションの睡眠時間の合計。
+      - 睡眠記録がない日はtotal_duration=None、sessions=[]とする。
+      - 日次集計レコードが存在しない日は、睡眠記録があってもget_daily()はNoneを返す。
     """
   
     sql = """
@@ -260,7 +324,15 @@ class GadgetbridgeDB:
 
     day_jst = datetime.fromtimestamp(row["TIMESTAMP"] / 1000, JST).date().isoformat()
 
+    # 睡眠セッションの取得
+    sessions = self._get_sleep_sessions(day_jst)
+    durations = [s["total_duration"] for s in sessions if s["total_duration"] is not None]
+    sleep = {
+      "total_duration": sum(durations) if durations else None,
+      "sessions": sessions
+    }
+
     return {"date": day_jst, "steps": row["STEPS"], "calories": row["CALORIES"],
             "heart_rate_resting": nonzero(row["HR_RESTING"]), "heart_rate_avg": nonzero(row["HR_AVG"]),
             "heart_rate_min": nonzero(row["HR_MIN"]), "heart_rate_max": nonzero(row["HR_MAX"]),
-            "stress_avg": nonzero(row["STRESS_AVG"]), "spo2_avg": nonzero(row["SPO2_AVG"])}
+            "stress_avg": nonzero(row["STRESS_AVG"]), "spo2_avg": nonzero(row["SPO2_AVG"]), "sleep": sleep}

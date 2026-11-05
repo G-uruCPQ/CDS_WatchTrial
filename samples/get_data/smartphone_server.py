@@ -41,7 +41,7 @@ class RequestHandler(BaseHTTPRequestHandler):
     last_access_time = time.time()
     parsed_path = urllib.parse.urlparse(self.path)
     path = parsed_path.path
-    query = urllib.parse.parse_qs(parsed_path.query)
+    query = urllib.parse.parse_qs(parsed_path.query, keep_blank_values=True)
     try:
       # 最新の測定データ
       if path == "/data/latest":
@@ -89,7 +89,7 @@ class RequestHandler(BaseHTTPRequestHandler):
       self.log_error("Unexpected error:\n%s", traceback.format_exc())
       status_code = 500
       data = {"error": "Internal server error"}
-    
+
     # HTTPレスポンス送信
     try:
       body = json.dumps(data, ensure_ascii=False).encode("utf-8")
@@ -124,6 +124,7 @@ if __name__ == "__main__":
   server_instance = server
   # アイドル監視スレッドをスタート
   watch_thread = threading.Thread(target=idle_watcher, daemon=True)
+  watch_thread.start()
   print(
     f"Listening on {HOST}:{PORT}... (Auto-shutdown after {IDLE_TIMEOUT_SEC}s"
     " idle)"

@@ -1,6 +1,6 @@
 import requests
 
-PHONE_URL = "http://192.168.137.32:8081"
+PHONE_URL = "http://{IPアドレス}:8081"
 
 # 最新データ
 response = requests.get(f"{PHONE_URL}/data/latest", timeout=10)

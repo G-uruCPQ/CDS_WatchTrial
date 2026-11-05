@@ -32,9 +32,9 @@ Notes:
 
 import sqlite3
 import time
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from contextlib import closing
-from datetime import datetime, timezone, timedelta
 
 
 JST = timezone(timedelta(hours=9))

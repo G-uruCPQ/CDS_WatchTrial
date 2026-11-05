@@ -1,13 +1,11 @@
-import threading
-import traceback
-import time
-import json
-import re
+import json, re
 import sqlite3
+import threading, traceback
+import time
+import urllib.parse
 from datetime import date
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
-import urllib.parse
 
 from database_reader import GadgetbridgeDB
 

@@ -34,10 +34,9 @@ PORT = 8081 # vibrationサーバー(8080)とは別ポート
 # DBエクスポート要求の間隔 [min]
 AUTO_EXPORT_INTERVAL_MIN = 5
 
-DB_PATH = (
-  Path(__file__).resolve().parent.parent
-  / "Database" / "Gadgetbridge.db"
-)
+# DBファイルの保存先
+# 各自のエクスポート先に合わせて変更してください。
+DB_PATH = (Path(__file__).resolve().parent.parent / "Database" / "Gadgetbridge.db")
 
 # DB解析はdatabase_reader.pyに任せる
 reader = GadgetbridgeDB(str(DB_PATH), device_id=1)

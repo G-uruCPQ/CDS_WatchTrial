@@ -2,7 +2,7 @@ import requests
 import time
 from datetime import datetime, timezone, timedelta
 
-PHONE_URL = "http://{IPアドレス}}:8081"
+PHONE_URL = "http://{IPアドレス}:8081"
 
 JST = timezone(timedelta(hours=9))
 

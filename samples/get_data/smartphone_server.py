@@ -4,7 +4,7 @@ Gadgetbridge HTTP Server
 GET  /data/latest : 最新測定値
 GET  /data/daily  : 日次集計・睡眠情報
 GET  /data/status : DB・エクスポート要求状況
-POST /data/export : DBエクスポートを要求
+GET  /data/export : DBエクスポートを要求
 """
 
 import json, re
@@ -19,13 +19,6 @@ from pathlib import Path
 
 from database_reader import GadgetbridgeDB
 
-# # ----------------------------------------------------
-# # 設定：最後のアクセスから何秒放置されたら終了するか (例: 300秒 = 5分)
-# IDLE_TIMEOUT_SEC = 1000
-# # 最終アクセスの時刻を保持する変数（初期値は現在時刻）
-# last_access_time = time.time()
-# server_instance = None
-# # ----------------------------------------------------
 
 # ===== 設定 =====
 HOST = "0.0.0.0"
@@ -68,9 +61,6 @@ class RequestHandler(BaseHTTPRequestHandler):
   def address_string(self):
     return self.client_address[0]
   def do_GET(self):
-    global last_access_time
-    # リクエストが来たら最終アクセス時刻を現在に更新（タイマーリセット）
-    last_access_time = time.time()
     parsed_path = urllib.parse.urlparse(self.path)
     path = parsed_path.path
     query = urllib.parse.parse_qs(parsed_path.query, keep_blank_values=True)
@@ -143,19 +133,6 @@ class RequestHandler(BaseHTTPRequestHandler):
     except (BrokenPipeError, ConnectionResetError):
       self.log_message("Client disconnected")
 
-# # 一定時間アクセスがないかを監視するバックグラウンド関数
-# def idle_watcher():
-#   global last_access_time, server_instance
-#   while server_instance:
-#     time.sleep(10)  # 10秒ごとにチェック
-#     elapsed = time.time() - last_access_time
-#     if elapsed > IDLE_TIMEOUT_SEC:
-#       print(
-#         f"\n{IDLE_TIMEOUT_SEC}秒間アクセスがなかったため、サーバーを自動終了します。"
-#       )
-#       server_instance.shutdown()
-#       break
-
 # データベース定期自動出力関数
 def auto_db_export():
   while not stop_event.wait(AUTO_EXPORT_INTERVAL_MIN * 60):
@@ -170,15 +147,6 @@ if __name__ == "__main__":
     raise ValueError("AUTO_EXPORT_INTERVAL_MIN must be positive")
 
   server = HTTPServer((HOST, PORT), RequestHandler)
-  server_instance = server
-
-  # # アイドル監視スレッドをスタート
-  # watch_thread = threading.Thread(target=idle_watcher, daemon=True)
-  # watch_thread.start()
-  # print(
-  #   f"Listening on {HOST}:{PORT}... (Auto-shutdown after {IDLE_TIMEOUT_SEC}s"
-  #   " idle)"
-  # )
 
   # 定期エクスポート用スレッドをスタート
   db_thread = threading.Thread(target=auto_db_export, daemon=True)

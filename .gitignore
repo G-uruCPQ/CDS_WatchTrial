@@ -3,5 +3,13 @@
 __pycache__/
 *.pyc
 
+# Microsoft一時ファイル
 ~$*
 ~*.tmp
+
+# Gadgetbridge database files
+Database/
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
